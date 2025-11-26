@@ -11,7 +11,13 @@ on:
       - main
     paths-ignore:
       - "**/README.md"
-  workflow_dispatch:
+  workflow_dispatch:    
+    inputs:
+      platform:
+        required: true
+        type: choice
+        options:
+          - arm64
 
 env:
   IMAGE_DESC: "HyprBlue Custom Image, based on bluefin-dx"
