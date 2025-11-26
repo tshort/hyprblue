@@ -30,7 +30,7 @@ COPR_REPOS=(
 )
 for repo in "${COPR_REPOS[@]}"; do
 	# Try to enable the repo, but don't fail the build if it doesn't support this Fedora version
-	if ! dnf5 -y copr enable "$repo" 2>&1; then
+	if ! dnf -y copr enable "$repo" 2>&1; then
 		log "Warning: Failed to enable COPR repo $repo (may not support Fedora $RELEASE)"
 	fi
 done
@@ -213,7 +213,7 @@ dnf5 install --setopt=install_weak_deps=False -y \
 
 log "Disable Copr repos to get rid of clutter..."
 for repo in "${COPR_REPOS[@]}"; do
-	dnf5 -y copr disable "$repo"
+	dnf -y copr disable "$repo"
 done
 
 #######################################################################
