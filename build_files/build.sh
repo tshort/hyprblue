@@ -24,8 +24,8 @@ COPR_REPOS=(
 	# leloubil/wl-clip-persist
 	# pgdev/ghostty
 	# solopasha/hyprland
-	tofik/sway
-	ulysg/xwayland-satellite
+	# tofik/sway
+	# ulysg/xwayland-satellite
 	yalter/niri
 )
 for repo in "${COPR_REPOS[@]}"; do
@@ -155,7 +155,7 @@ fi
 # are prebundled inside our parent image.
 NIRI_PKGS=(
 	niri
-	swaylock
+	# swaylock
 	# alacritty
 	# brightnessctl
 	# fuzzel
