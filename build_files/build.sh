@@ -184,17 +184,17 @@ fi
 # for most things with GUIs, and homebrew for CLI apps. This list is
 # only special GUI apps that need to be installed at the system level.
 ADDITIONAL_SYSTEM_APPS=(
-	alacritty
+	# alacritty
 
 	# ghostty is broken in Fedora 42 right now
 	# ghostty
 
-	kitty
-	kitty-terminfo
+	# kitty
+	# kitty-terminfo
 
-	thunar
-	thunar-volman
-	thunar-archive-plugin
+	# thunar
+	# thunar-volman
+	# thunar-archive-plugin
 )
 
 # we do all package installs in one rpm-ostree command
