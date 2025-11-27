@@ -18,12 +18,12 @@ USE_SDDM=FALSE
 
 log "Enable Copr repos..."
 COPR_REPOS=(
-	erikreider/SwayNotificationCenter # for swaync
-	errornointernet/packages
-	heus-sueh/packages                # for matugen/swww, needed by hyprpanel
-	leloubil/wl-clip-persist
+	# erikreider/SwayNotificationCenter # for swaync
+	# errornointernet/packages
+	# heus-sueh/packages                # for matugen/swww, needed by hyprpanel
+	# leloubil/wl-clip-persist
 	# pgdev/ghostty
-	solopasha/hyprland
+	# solopasha/hyprland
 	tofik/sway
 	ulysg/xwayland-satellite
 	yalter/niri
@@ -65,78 +65,78 @@ FONTS=(
 # https://github.com/JaKooLit/Fedora-Hyprland/ with additions
 # from ml4w and other sources.
 HYPR_DEPS=(
-	aquamarine
-	aylurs-gtk-shell2
-	blueman
-	bluez
-	bluez-tools
-	brightnessctl
-	btop
-	cava
-	cliphist
-	# egl-wayland
-	eog
-	fuzzel
-	gnome-bluetooth
-	grim
-	grimblast
-	gvfs
-	hyprpanel
-	inxi
-	kvantum
-	# lib32-nvidia-utils
-	libgtop2
-	mako
-	matugen
-	mpv
-	# mpv-mpris
-	network-manager-applet
-	nodejs
-	# nvidia-dkms
-	# nvidia-utils
-	nwg-look
-	pamixer
-	pavucontrol
-	playerctl
-	# power-profiles-daemon
-	python3-pyquery
-	qalculate-gtk
-	qt5ct
-	qt6ct
-	rofi-wayland
-	slurp
-	swappy
-	swaync
-	swww
-	tumbler
-	upower
-	wallust
-	waybar
-	wget2
-	wireplumber
-	wl-clipboard
-	wl-clip-persist
-	wlogout
-	wlr-randr
-	xarchiver
-	xdg-desktop-portal-gtk
-	xdg-desktop-portal-hyprland
-	xwayland-satellite
-	yad
+	# aquamarine
+	# aylurs-gtk-shell2
+	# blueman
+	# bluez
+	# bluez-tools
+	# brightnessctl
+	# btop
+	# cava
+	# cliphist
+	# # egl-wayland
+	# eog
+	# fuzzel
+	# gnome-bluetooth
+	# grim
+	# grimblast
+	# gvfs
+	# hyprpanel
+	# inxi
+	# kvantum
+	# # lib32-nvidia-utils
+	# libgtop2
+	# mako
+	# matugen
+	# mpv
+	# # mpv-mpris
+	# network-manager-applet
+	# nodejs
+	# # nvidia-dkms
+	# # nvidia-utils
+	# nwg-look
+	# pamixer
+	# pavucontrol
+	# playerctl
+	# # power-profiles-daemon
+	# python3-pyquery
+	# qalculate-gtk
+	# qt5ct
+	# qt6ct
+	# rofi-wayland
+	# slurp
+	# swappy
+	# swaync
+	# swww
+	# tumbler
+	# upower
+	# wallust
+	# waybar
+	# wget2
+	# wireplumber
+	# wl-clipboard
+	# wl-clip-persist
+	# wlogout
+	# wlr-randr
+	# xarchiver
+	# xdg-desktop-portal-gtk
+	# xdg-desktop-portal-hyprland
+	# xwayland-satellite
+	# yad
 )
 
 # Hyprland ecosystem packages
 HYPR_PKGS=(
-	hyprland
-	hyprcursor
-	hyprpaper
-	hyprpicker
-	hypridle
-	hyprlock
-	hyprshot
-	xdg-desktop-portal-hyprland
-	hyprsunset
-	hyprutils
+	# hyprland
+	# hyprcursor
+	# hyprpaper
+	# hyprpicker
+	# hypridle
+	# hyprlock
+	# hyprshot
+	# xdg-desktop-portal-hyprland
+	# hyprsunset
+	# hyprutils
 )
 
 # Detect if we're on Bazzite (has KDE/Qt 6.10) or Bluefin (has GNOME/Qt 6.9)
@@ -173,10 +173,10 @@ NIRI_PKGS=(
 SDDM_PACKAGES=()
 if [[ $USE_SDDM == TRUE ]]; then
 	SDDM_PACKAGES=(
-		sddm
-		sddm-breeze
-		sddm-kcm
-		qt6-qt5compat
+		# sddm
+		# sddm-breeze
+		# sddm-kcm
+		# qt6-qt5compat
 	)
 fi
 
@@ -200,7 +200,7 @@ ADDITIONAL_SYSTEM_APPS=(
 # we do all package installs in one rpm-ostree command
 # so that we create minimal layers in the final image
 log "Installing packages using dnf5..."
-dnf5 install --setopt=install_weak_deps=False -y \
+dnf install --setopt=install_weak_deps=False -y \
 	"${FONTS[@]}" \
 	"${HYPR_DEPS[@]}" \
 	"${HYPR_PKGS[@]}" \
