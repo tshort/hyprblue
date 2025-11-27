@@ -144,9 +144,9 @@ HYPR_PKGS=(
 if ! grep -qi "bazzite" /usr/lib/os-release 2>/dev/null; then
 	# Only add Qt-dependent packages on Bluefin
 	HYPR_PKGS+=(
-		hyprsysteminfo
-		hyprpolkitagent
-		hyprland-qt-support
+		# hyprsysteminfo
+		# hyprpolkitagent
+		# hyprland-qt-support
 	)
 fi
 
